@@ -17,6 +17,6 @@ public class AlgorithmCase extends EthicsCase {
         return biasType;
     }
     public String toString() {
-        return "Case title is" + super.getCaseTitle() + "description is" + super.getCaseDescription() + " biastype is" biasType;
+        return "Case title is" + super.getCaseTitle() + "description is" + super.getCaseDescription() + " biastype is" + biasType;
     }
 }
