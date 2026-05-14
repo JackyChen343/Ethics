@@ -7,6 +7,19 @@
  *
  * @author 343089579
  */
-public class MisinfomationCase {
+public class MisinfomationCase extends EthicsCase{
+    private String mediaType;
+    public MisinfomationCase(String caseTitle, String description, String mediaType){
+    super(caseTitle, description,"Misinformation");
+    this.mediaType=mediaType;
+    }
+    
+    public String getMediaType(){
+        return mediaType;
+    }
+    public String toString(){
+        return mediaType;
+    }
+    
     
 }

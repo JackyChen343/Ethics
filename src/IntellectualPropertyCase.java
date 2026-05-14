@@ -7,6 +7,17 @@
  *
  * @author 343089579
  */
-public class IntellectualPropertyCase {
-    
+public class IntellectualPropertyCase extends EthicsCase{
+    private String ipType;
+    public IntellectualPropertyCase(String caseTitle, String description, String ipType){
+    super(caseTitle, description,"IntellectualProperty");
+    this.ipType=ipType;
+    }
+
+    public String getIpType(){
+        return ipType;
+    }
+    public String toString(){
+        return ipType;
+    }
 }
