@@ -8,12 +8,23 @@
  * @author 342822160
  */
 public class Mainmenu extends javax.swing.JFrame {
+    
+    public EthicsCase cases[] = new EthicsCase[8];
+
 
     /**
      * Creates new form Mainmenu
      */
     public Mainmenu() {
         initComponents();
+    cases[0] = new PrivacyCase("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "audio recordings");
+    cases[1] = new AlgorithmCase("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "gender bias");
+    cases[2] = new MisinfomationCase("The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.", "deepfake video");
+    cases[3] = new IntellectualPropertyCase("AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.", "AI-generated art");
+    cases[4] = new MisinfomationCase("Tik-tok Healthcare", "Some online person on Tik-tok is telling others by pouring beer on self will cure cancer", "Fake Healthcare");
+    cases[5] = new PrivacyCase("Big Companies Taking Your Online Data", "Companies tracking you online activity and then send you ads based on the activity", "Personalized Ads");
+    cases[6] = new IntellectualPropertyCase("Companies take down Online Emulator","Millions of people are gaining free games by using online emulator of games to pay games free losing compaines millions","Emulator");
+    cases[7] = new AlgorithmCase("Club Ai is Racist","Golf club has an Ai that checks an lsit of people wanting to join and moves white people to the top of the list and indians people ot the bottom","Racist Ai");
     }
 
     /**
@@ -25,17 +36,28 @@ public class Mainmenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setText("Ethics Tester");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(jLabel1)
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(562, Short.MAX_VALUE))
         );
 
         pack();
@@ -77,5 +99,6 @@ public class Mainmenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
