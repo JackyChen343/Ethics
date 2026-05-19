@@ -10,6 +10,8 @@
 public class Mainmenu extends javax.swing.JFrame {
     
     public static EthicsCase cases[] = new EthicsCase[8];
+    public static int ethic = 0;
+    public static int unethic = 0;
 
 
     /**
