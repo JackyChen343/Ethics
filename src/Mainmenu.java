@@ -9,7 +9,7 @@
  */
 public class Mainmenu extends javax.swing.JFrame {
     
-    public EthicsCase cases[] = new EthicsCase[8];
+    public static EthicsCase cases[] = new EthicsCase[8];
 
 
     /**
@@ -17,7 +17,7 @@ public class Mainmenu extends javax.swing.JFrame {
      */
     public Mainmenu() {
         initComponents();
-    cases[0] = new PrivacyCase("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "audio recordings");
+    cases[0] = new PrivacyCase("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device \n was not activated. Employees reviewed the recordings.", "audio recordings");
     cases[1] = new AlgorithmCase("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "gender bias");
     cases[2] = new MisinfomationCase("The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.", "deepfake video");
     cases[3] = new IntellectualPropertyCase("AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.", "AI-generated art");
@@ -37,19 +37,32 @@ public class Mainmenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Ethics Tester");
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(226, 226, 226)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(226, 226, 226)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(jButton1)))
                 .addContainerGap(231, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -57,11 +70,19 @@ public class Mainmenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(562, Short.MAX_VALUE))
+                .addGap(228, 228, 228)
+                .addComponent(jButton1)
+                .addContainerGap(311, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new Screen1().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,12 +114,13 @@ public class Mainmenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Mainmenu().setVisible(true);
+             new Mainmenu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
