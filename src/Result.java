@@ -123,6 +123,15 @@ public class Result extends javax.swing.JFrame {
         if (Mainmenu.unethic<=2){
             jLabel5.setText("The Tech Optimist");
             jTextArea1.setText("You see technology as largely a force for good. You tend to trust that companies and developers have good intentions.");
+        }else if (Mainmenu.unethic<=4 && Mainmenu.ethic>=4){
+            jLabel5.setText("The Cautious Realist");
+            jTextArea1.setText("You see both the benefits and dangers of technology. You believe progress is good, but needs rules and accountability.");
+        }else if (Mainmenu.unethic<=6 && Mainmenu.ethic>=2){
+            jLabel5.setText("The Critical Thinker");
+            jTextArea1.setText(" You are skeptical of how technology is being used. You believe the tech industry needs serious reform to protect people.");
+        }else if (Mainmenu.unethic<=8 && Mainmenu.ethic>=1 ){
+            jLabel5.setText("The Ethics Watchdog");
+            jTextArea1.setText("You believe technology is causing more harm than good right now. You think strong laws and ethical standards are urgently needed.");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
