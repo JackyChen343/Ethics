@@ -1,0 +1,8 @@
+"PrivacyCase", "The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "audio recordings"
+"AlgorithmCase", "The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "gender bias"
+"MisinfomationCase", "The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.", "deepfake video"
+"IntellectualPropertyCase", "AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.", "AI-generated art"
+"MisinfomationCase", "Tik-tok Healthcare", "Some online person on Tik-tok is telling others by pouring beer on self will cure cancer", "Fake Healthcare"
+"PrivacyCase", "Big Companies Taking Your Online Data", "Companies tracking you online activity and then send you ads based on the activity", "Personalized Ads"
+"IntellectualPropertyCase", "Companies take down Online Emulator","Millions of people are gaining free games by using online emulator of games to pay games free losing compaines millions","Emulator"
+"AlgorithmCase", "Club Ai is Racist","Golf club has an Ai that checks an lsit of people wanting to join and moves white people to the top of the list and indians people ot the bottom","Racist Ai"

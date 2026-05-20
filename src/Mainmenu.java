@@ -7,6 +7,9 @@
  *
  * @author 342822160
  */
+import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
 public class Mainmenu extends javax.swing.JFrame {
     
     public static EthicsCase cases[] = new EthicsCase[8];
@@ -14,19 +17,37 @@ public class Mainmenu extends javax.swing.JFrame {
     public static int unethic = 0;
 
 
+
+
     /**
      * Creates new form Mainmenu
      */
     public Mainmenu() {
         initComponents();
-    cases[0] = new PrivacyCase("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device \n was not activated. Employees reviewed the recordings.", "audio recordings");
-    cases[1] = new AlgorithmCase("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified \n female applicants.", "gender bias");
-    cases[2] = new MisinfomationCase("The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during \n an election before being identified as fake.", "deepfake video");
-    cases[3] = new IntellectualPropertyCase("AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without permission. \n Artists receive no credit or payment.", "AI-generated art");
-    cases[4] = new MisinfomationCase("Tik-tok Healthcare", "Some online person on Tik-tok is telling others by pouring beer on self will cure cancer", "Fake Healthcare");
-    cases[5] = new PrivacyCase("Big Companies Taking Your Online Data", "Companies tracking you online activity and then send you ads based on the activity", "Personalized Ads");
-    cases[6] = new IntellectualPropertyCase("Companies take down Online Emulator","Millions of people are gaining free games by using online emulator of games to pay games \n free losing compaines millions","Emulator");
-    cases[7] = new AlgorithmCase("Club Ai is Racist","Golf club has an Ai that checks an lsit of people wanting to join and moves white people \n to the top of the list and indians people ot the bottom","Racist Ai");
+    try{
+    Scanner x = new Scanner(new File("case.txt"));
+    int num = 0;
+    while (x.hasNext()){
+        String y = x.nextLine();
+        String [] info = y.split(",");
+        if (info[0].equals("PrivacyCase")){
+            cases[num] = new PrivacyCase(info[1], info[2], info[3]);
+            num++;
+        } else if(info[0].equals("AlgorithmCase")){
+            cases[num] = new AlgorithmCase(info[1], info[2], info[3]);
+            num++;
+        }else if(info[0].equals("MisinfomationCase")){
+            cases[num] = new MisinfomationCase(info[1], info[2], info[3]);
+            num++;
+        }else if(info[0].equals("IntellectualPropertyCase")){
+            cases[num] = new IntellectualPropertyCase(info[1], info[2], info[3]);
+            num++;
+        }
+        x.close();
+    }
+    }catch( IOException ioException){
+        
+    }
     }
 
     /**
