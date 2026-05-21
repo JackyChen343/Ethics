@@ -31,16 +31,16 @@ public class Mainmenu extends javax.swing.JFrame {
         String y = x.nextLine();
         String [] info = y.split(",");
         if ( info[0].equals("PrivacyCase") ){
-            cases[num] = new PrivacyCase(info[1], info[2], info[3]);
+            cases[num] = new PrivacyCase(info[1].trim(), info[2].trim(), info[3].trim());
             num++;
         } else if( info[0].equals("AlgorithmCase") ){
-            cases[num] = new AlgorithmCase(info[1], info[2], info[3]);
+            cases[num] = new AlgorithmCase(info[1].trim(), info[2].trim(), info[3].trim());
             num++;
         }else if( info[0].equals("MisinfomationCase") ){
-            cases[num] = new MisinfomationCase(info[1], info[2], info[3]);
+            cases[num] = new MisinfomationCase(info[1].trim(), info[2].trim(), info[3].trim());
             num++;
         }else if( info[0].equals("IntellectualPropertyCase") ){
-            cases[num] = new IntellectualPropertyCase(info[1], info[2], info[3]);
+            cases[num] = new IntellectualPropertyCase(info[1].trim(), info[2].trim(), info[3].trim());
             num++;
         }
         x.close();
