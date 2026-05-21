@@ -46,7 +46,7 @@ public class Mainmenu extends javax.swing.JFrame {
         x.close();
     }
     }catch( IOException ioException){
-        
+        System.err.println("Java Exception" + ioException);
     }
     }
 
