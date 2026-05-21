@@ -25,26 +25,26 @@ public class Mainmenu extends javax.swing.JFrame {
     public Mainmenu() {
         initComponents();
     try{
-    Scanner x = new Scanner(new File("case.txt"));
+    Scanner fileInput = new Scanner( new File ( "case.txt" ) );
     int num = 0;
-    while ( x.hasNext() ){
-        String y = x.nextLine();
-        String [] info = y.split(",");
+    while ( fileInput.hasNext() ){
+        String x = fileInput.nextLine();
+        String info [] = x.split(",");
         if ( info[0].equals("PrivacyCase") ){
-            cases[num] = new PrivacyCase(info[1].trim(), info[2].trim(), info[3].trim());
+            cases[num] = new PrivacyCase(info[1], info[2], info[3]);
             num++;
         } else if( info[0].equals("AlgorithmCase") ){
-            cases[num] = new AlgorithmCase(info[1].trim(), info[2].trim(), info[3].trim());
+            cases[num] = new AlgorithmCase(info[1], info[2], info[3]);
             num++;
         }else if( info[0].equals("MisinfomationCase") ){
-            cases[num] = new MisinfomationCase(info[1].trim(), info[2].trim(), info[3].trim());
+            cases[num] = new MisinfomationCase(info[1], info[2], info[3]);
             num++;
         }else if( info[0].equals("IntellectualPropertyCase") ){
-            cases[num] = new IntellectualPropertyCase(info[1].trim(), info[2].trim(), info[3].trim());
+            cases[num] = new IntellectualPropertyCase(info[1], info[2], info[3]);
             num++;
         }
-        x.close();
     }
+    fileInput.close();
     }catch( IOException ioException){
         System.err.println("Java Exception" + ioException);
     }

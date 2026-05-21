@@ -1,3 +1,8 @@
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -130,7 +135,7 @@ public class Screen1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        jLabel1.setText(Mainmenu.cases[0].getCaseTitle());
+	jLabel1.setText(Mainmenu.cases[0].getCaseTitle());
         jLabel2.setText(Mainmenu.cases[0].getCategory());
         jTextArea1.setText(Mainmenu.cases[0].getCaseDescription());
     }//GEN-LAST:event_jButton2ActionPerformed
