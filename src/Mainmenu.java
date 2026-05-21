@@ -27,19 +27,19 @@ public class Mainmenu extends javax.swing.JFrame {
     try{
     Scanner x = new Scanner(new File("case.txt"));
     int num = 0;
-    while (x.hasNext()){
+    while ( x.hasNext() ){
         String y = x.nextLine();
         String [] info = y.split(",");
-        if (info[0].equals("PrivacyCase")){
+        if ( info[0].equals("PrivacyCase") ){
             cases[num] = new PrivacyCase(info[1], info[2], info[3]);
             num++;
-        } else if(info[0].equals("AlgorithmCase")){
+        } else if( info[0].equals("AlgorithmCase") ){
             cases[num] = new AlgorithmCase(info[1], info[2], info[3]);
             num++;
-        }else if(info[0].equals("MisinfomationCase")){
+        }else if( info[0].equals("MisinfomationCase") ){
             cases[num] = new MisinfomationCase(info[1], info[2], info[3]);
             num++;
-        }else if(info[0].equals("IntellectualPropertyCase")){
+        }else if( info[0].equals("IntellectualPropertyCase") ){
             cases[num] = new IntellectualPropertyCase(info[1], info[2], info[3]);
             num++;
         }
