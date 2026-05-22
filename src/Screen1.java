@@ -1,7 +1,7 @@
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 
@@ -140,6 +140,15 @@ public class Screen1 extends javax.swing.JFrame {
             Mainmenu.ethic++;
         } else if (jRadioButton2.isSelected()){
             Mainmenu.unethic++;
+        }
+        String Reason = jTextArea2.getText();
+        try{
+            FileWriter w = new FileWriter("verdict.txt", true);
+            PrintWriter Out = new PrintWriter(w);
+            Out.print(Reason + ", ");
+            Out.close();
+        }catch(IOException ioException){
+            System.err.println("Java Exception: "+ ioException);
         }
         
         new Screen2().setVisible(true);

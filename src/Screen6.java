@@ -4,6 +4,9 @@
  */
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -132,6 +135,17 @@ public class Screen6 extends javax.swing.JFrame {
         } else if (jRadioButton2.isSelected()){
             Mainmenu.unethic++;
         }
+        
+        String Reason = jTextArea2.getText();
+        try{
+            FileWriter w = new FileWriter("verdict.txt", true);
+            PrintWriter Out = new PrintWriter(w);
+            Out.print(Reason + ", ");
+            Out.close();
+        }catch(IOException ioException){
+            System.err.println("Java Exception: "+ ioException);
+        }
+        
         new Screen7().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
