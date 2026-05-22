@@ -35,6 +35,7 @@ public class Result extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 197, 206));
 
         jButton1.setText("Get Result");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

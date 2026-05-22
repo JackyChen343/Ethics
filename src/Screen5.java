@@ -2,6 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
 
 /**
  *
@@ -14,6 +16,14 @@ public class Screen5 extends javax.swing.JFrame {
      */
     public Screen5() {
         initComponents();
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowActivated(WindowEvent e) {
+                System.out.println("JFrame is now focused!");
+                //add code here
+                
+            }
+        });
     }
 
     /**
