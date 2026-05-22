@@ -30,6 +30,7 @@ public class Mainmenu extends javax.swing.JFrame {
     while ( fileInput.hasNext() ){
         String x = fileInput.nextLine();
         String info [] = x.split(",");
+        
         if ( info[0].equals("PrivacyCase") ){
             cases[num] = new PrivacyCase(info[1], info[2], info[3]);
             num++;
